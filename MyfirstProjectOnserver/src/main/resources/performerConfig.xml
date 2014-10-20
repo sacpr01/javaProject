@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="poeticduke" class="com.springIdol.JugglerImpl">
+        <constructor-arg value="15"></constructor-arg>
+        <constructor-arg ref="sonnet29"></constructor-arg>
+
+
+
+
+    </bean>
+
+<bean id="sonnet29" class="com.springIdol.Sonet28"></bean>
+
+<bean id="kenny" class="com.springIdol.Instrumentalist" p:song="Fert" p:instrument-ref="sax">
+
+
+</bean>
+
+
+    <bean id="cymbala" class="com.springIdol.Cymbal"></bean>
+<bean id="guitar" class="com.springIdol.Guitar"></bean>
+<bean id="sax" class="com.springIdol.Sax">
+
+
+
+
+
+
+
+
+    
+
+
+
+</bean>
+
+
+
+    <bean id="hank" class="com.springIdol.OneManBand">
+        <property name="instruments" >
+            <list>
+                <ref bean="sax"></ref>
+                <ref bean="cymbala"></ref>
+                <ref bean="guitar"></ref>
+
+
+
+
+
+            </list>
+
+
+
+        </property>
+
+
+
+
+    </bean>
+
+
+</beans>
